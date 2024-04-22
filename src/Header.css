@@ -1,0 +1,49 @@
+header {
+    nav {
+        display: flex;
+        /* justify-content: space-between; */
+        gap: 8px;
+        justify-content: flex-end;
+        padding: 8px;
+
+        a {
+            color: rgba(255, 255, 255, 0.25);
+            display: inline-flex;
+            font-size: large;
+            font-weight: bold;
+            justify-content: center;
+            padding: 8px 32px;
+            /* width: 12%; */
+            border-radius: 16px 0;
+        }
+
+        a:hover:not(.active) {
+            background-color: rgba(249, 115, 22, 0.75);
+            color: #fff;
+        }
+
+        a.active {
+            /* color: #fff; */
+            color: #ffffff00;
+            /* width: 70%; */
+            padding: 0;
+            width: 0;
+        }
+
+        /* a.active:hover {
+            background-color: #525252;
+        } */
+
+        a:first-of-type {
+            border-radius: 16px 0;
+        }
+
+        a:not(:last-of-type):not(:first-of-type) {
+            border-radius: 16px;
+        }
+
+        a:last-of-type {
+            border-radius: 0 16px;
+        }
+    }
+}
