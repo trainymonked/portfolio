@@ -1,7 +1,10 @@
 import { useLocation } from 'react-router-dom'
 
 import './Header.css'
-import { useEffect, useState } from 'react'
+import {
+    useEffect,
+    // useState
+} from 'react'
 
 const pages = [
     {
@@ -23,12 +26,12 @@ const pages = [
 
 const Header = () => {
     const location = useLocation()
-    const [links, setLinks] = useState<{ href: string; title: string; content: string }[]>([])
-    const [current, setCurrent] = useState<string>('')
+    // const [links, setLinks] = useState<{ href: string; title: string; content: string }[]>([])
+    // const [current, setCurrent] = useState<string>('')
 
     useEffect(() => {
-        setLinks(pages.filter(page => page.href !== location.pathname))
-        setCurrent(pages.find(page => page.href === location.pathname)?.content!)
+        // setLinks(pages.filter(page => page.href !== location.pathname))
+        // setCurrent(pages.find(page => page.href === location.pathname)?.content!)
     }, [location.pathname])
 
     return (
