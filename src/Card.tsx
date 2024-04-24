@@ -22,10 +22,10 @@ const CardComponent: FC<CardProps> = ({ card }) => {
         >
             <div>
                 <img
-                    src={card.image}
+                    src={'/portfolio' + card.image}
                     onError={error => {
-                        if (error.currentTarget.src) {
-                            error.currentTarget.src = '/img/projects/no-image.jpg'
+                        if (error.currentTarget.src && !error.currentTarget.src.includes('/portfolio/img/projects/no-image.jpg')) {
+                            error.currentTarget.src = '/portfolio/img/projects/no-image.jpg'
                         }
                     }}
                     alt={card.title}
