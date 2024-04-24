@@ -1,7 +1,6 @@
 header {
     nav {
         display: flex;
-        /* justify-content: space-between; */
         gap: 8px;
         justify-content: flex-end;
         padding: 8px;
@@ -13,37 +12,35 @@ header {
             font-weight: bold;
             justify-content: center;
             padding: 8px 32px;
-            /* width: 12%; */
             border-radius: 16px 0;
         }
 
-        a:hover:not(.active) {
+        a:hover {
             background-color: rgba(249, 115, 22, 0.75);
             color: #fff;
         }
-
-        a.active {
-            /* color: #fff; */
-            color: #ffffff00;
-            /* width: 70%; */
-            padding: 0;
-            width: 0;
-        }
-
-        /* a.active:hover {
-            background-color: #525252;
-        } */
 
         a:first-of-type {
             border-radius: 16px 0;
         }
 
-        a:not(:last-of-type):not(:first-of-type) {
-            border-radius: 16px;
-        }
-
         a:last-of-type {
             border-radius: 0 16px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    header {
+        margin-top: 8px !important;
+        h1 {
+            font-size: 1.25rem !important;
+            margin-left: 12px;
+        }
+        nav {
+            a {
+                padding: 4px 8px;
+            }
         }
     }
 }

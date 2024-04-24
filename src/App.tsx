@@ -4,7 +4,6 @@ import initialCards from './cards'
 import CardComponent, { Card } from './Card'
 
 const SHOW_NSFW_PROJECTS = false
-// const SHOW_NSFW_PROJECTS = true
 
 const App = () => {
     const [cards, setCards] = useState<Card[]>(initialCards)
@@ -38,7 +37,7 @@ const App = () => {
 
     return (
         <div className='container mx-auto'>
-            <div className='flex justify-start mb-4 font-medium'>
+            <div className='flex justify-start mb-4 font-medium flex-wrap gap-y-2 px-3 mt-2'>
                 <button
                     className={`mr-2 px-4 py-2 rounded-md ${
                         selectedTag === null ? 'bg-orange-500 text-white' : 'bg-white text-gray-800'
@@ -72,7 +71,7 @@ const App = () => {
                                 key={tag}
                                 className='mb-8'
                             >
-                                <h2 className='text-2xl font-semibold mb-4'>{tag}</h2>
+                                <h2 className='text-2xl font-semibold mb-4 text-white'>{tag}</h2>
                                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                                     {cards
                                         .sort((a, b) => a.title.localeCompare(b.title))

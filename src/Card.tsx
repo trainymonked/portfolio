@@ -16,12 +16,20 @@ interface CardProps {
 
 const CardComponent: FC<CardProps> = ({ card }) => {
     return (
-        <div className='bg-white p-2 rounded-md shadow-md overflow-hidden flex justify-between flex-col'>
+        <div
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+            className='p-2 rounded-md shadow-md overflow-hidden flex justify-between flex-col text-white'
+        >
             <div>
                 <img
                     src={card.image}
+                    onError={error => {
+                        if (error.currentTarget.src) {
+                            error.currentTarget.src = '/img/projects/no-image.jpg'
+                        }
+                    }}
                     alt={card.title}
-                    className='w-full h-[12.5rem] mb-1 rounded-md object-contain'
+                    className='w-full md:h-[12.5rem] mb-1 rounded-md object-cover border-2 border-black'
                 />
                 <h2 className='text-xl font-semibold mb-2'>{card.title}</h2>
                 <p className='mb-2'>{card.description}</p>
@@ -33,7 +41,7 @@ const CardComponent: FC<CardProps> = ({ card }) => {
                         {card.tools.map(tool => (
                             <span
                                 key={tool}
-                                className='px-2 py-0.5 bg-zinc-300 text-sm rounded-full'
+                                className='px-2 py-0.5 bg-zinc-700 text-sm rounded-full'
                             >
                                 {tool}
                             </span>
@@ -44,7 +52,7 @@ const CardComponent: FC<CardProps> = ({ card }) => {
                     <div className='mt-2'>
                         <span className='mr-1'>Demo:</span>
                         <a
-                            className='text-blue-600 font-semibold hover:underline'
+                            className='font-semibold hover:underline'
                             href={card.demo}
                             target='_blank'
                         >
