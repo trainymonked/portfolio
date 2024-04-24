@@ -1,22 +1,29 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import initialCards from './cards'
 import CardComponent, { Card } from './Card'
 
-const SHOW_NSFW_PROJECTS = false
-
 const App = () => {
-    const [cards, setCards] = useState<Card[]>(initialCards)
-    const [selectedTag, setSelectedTag] = useState<string | null>(null)
+    const [showHidden, setShowHidden] = useState(false)
+    const [cardsFiltered, setCardsFiltered] = useState<Card[]>(initialCards.filter(card => !card.hidden || showHidden))
 
-    const filterCards = (tag: string | null) => {
+    const [selectedTag, setSelectedTag] = useState<string | null>(null)
+    const [cards, setCards] = useState<Card[]>(cardsFiltered)
+
+    useEffect(() => {
+        const newCards = initialCards.filter(card => !card.hidden || showHidden)
+        setCardsFiltered(newCards)
+        filterCards(selectedTag, newCards)
+    }, [showHidden, selectedTag])
+
+    const filterCards = (tag: string | null, newCards = cardsFiltered) => {
         if (tag === null) {
-            setCards(initialCards)
+            setCards(newCards)
         } else if (tag === 'Uncategorized') {
-            const filteredCards = initialCards.filter(card => card.tag === '')
+            const filteredCards = newCards.filter(card => card.tag === '')
             setCards(filteredCards)
         } else {
-            const filteredCards = initialCards.filter(card => card.tag === tag)
+            const filteredCards = newCards.filter(card => card.tag === tag)
             setCards(filteredCards)
         }
         setSelectedTag(tag)
@@ -25,9 +32,6 @@ const App = () => {
     const groupedCards: { [tag: string]: Card[] } = {}
     if (!selectedTag) {
         cards.forEach(card => {
-            if (card.tag === 'ROFL' && !SHOW_NSFW_PROJECTS) {
-                return
-            }
             if (!groupedCards[card.tag]) {
                 groupedCards[card.tag] = []
             }
@@ -37,7 +41,7 @@ const App = () => {
 
     return (
         <div className='container mx-auto'>
-            <div className='flex justify-start mb-4 font-medium flex-wrap gap-y-2 px-3 mt-2'>
+            <div className='flex justify-start mb-4 font-medium flex-wrap gap-y-2 mt-2'>
                 <button
                     className={`mr-2 px-4 py-2 rounded-md ${
                         selectedTag === null ? 'bg-orange-500 text-white' : 'bg-white text-gray-800'
@@ -46,8 +50,7 @@ const App = () => {
                 >
                     All
                 </button>
-                {Array.from(new Set(initialCards.flatMap(card => card.tag)))
-                    .filter(tag => tag !== 'ROFL' || SHOW_NSFW_PROJECTS)
+                {Array.from(new Set(cardsFiltered.flatMap(card => card.tag)))
                     .map(tag => tag || 'Uncategorized')
                     .sort()
                     .map(tag => (
@@ -61,6 +64,16 @@ const App = () => {
                             {tag || 'Uncategorized'}
                         </button>
                     ))}
+            </div>
+            <div className='flex gap-1 text-white'>
+                <input
+                    type='checkbox'
+                    id='myCheckbox'
+                    checked={showHidden}
+                    onChange={() => setShowHidden(!showHidden)}
+                    className=''
+                />
+                <label htmlFor='myCheckbox'>Show hidden projects</label>
             </div>
             {!selectedTag ? (
                 <div>
@@ -86,7 +99,7 @@ const App = () => {
                         ))}
                 </div>
             ) : (
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 mb-8'>
                     {cards
                         .sort((a, b) => a.title.localeCompare(b.title))
                         .map(card => (

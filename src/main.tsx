@@ -12,7 +12,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <HashRouter>
             <div className='w-full h-full'>
                 <Header />
-                <Routes>
+                <App />
+                {/* <Routes>
                     <Route
                         path='/'
                         Component={App}
@@ -21,7 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
                         path='/about'
                         Component={About}
                     />
-                </Routes>
+                </Routes> */}
             </div>
         </HashRouter>
     </React.StrictMode>

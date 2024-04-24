@@ -8,6 +8,7 @@ export interface Card {
     tag: string
     tools: string[]
     demo?: string
+    hidden?: boolean
 }
 
 interface CardProps {
@@ -24,7 +25,10 @@ const CardComponent: FC<CardProps> = ({ card }) => {
                 <img
                     src={'/portfolio' + card.image}
                     onError={error => {
-                        if (error.currentTarget.src && !error.currentTarget.src.includes('/portfolio/img/projects/no-image.jpg')) {
+                        if (
+                            error.currentTarget.src &&
+                            !error.currentTarget.src.includes('/portfolio/img/projects/no-image.jpg')
+                        ) {
                             error.currentTarget.src = '/portfolio/img/projects/no-image.jpg'
                         }
                     }}
@@ -56,7 +60,7 @@ const CardComponent: FC<CardProps> = ({ card }) => {
                             href={card.demo}
                             target='_blank'
                         >
-                            {card.demo}
+                            Click here
                         </a>
                     </div>
                 )}

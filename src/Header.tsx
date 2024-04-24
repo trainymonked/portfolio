@@ -7,7 +7,7 @@ const pages = [
     {
         href: '/',
         title: 'Projects',
-        content: 'All of My Projects',
+        content: 'All My Personal Projects',
     },
     {
         href: '/about',
@@ -33,8 +33,9 @@ const Header = () => {
 
     return (
         <header className='container mx-auto flex justify-between mt-4'>
-            <h1 className='text-white text-3xl font-bold pt-2 text-nowrap'>{current}</h1>
-            <nav>
+            <h1 className='text-white text-3xl font-bold pt-2 text-nowrap mb-2'>{pages[0].content}</h1>
+            {/* <h1 className='text-white text-3xl font-bold pt-2 text-nowrap mb-2'>{current}</h1> */}
+            {/* <nav>
                 {links.map(link => {
                     return (
                         <a
@@ -45,7 +46,7 @@ const Header = () => {
                         </a>
                     )
                 })}
-            </nav>
+            </nav> */}
         </header>
     )
 }
