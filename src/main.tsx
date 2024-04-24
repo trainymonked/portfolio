@@ -10,7 +10,7 @@ import About from './About.tsx'
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <HashRouter>
-            <div className='w-full h-full bg-zinc-500'>
+            <div className='w-full h-full'>
                 <Header />
                 <Routes>
                     <Route
