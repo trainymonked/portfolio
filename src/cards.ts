@@ -41,8 +41,8 @@ const initialCards: Card[] = [
     },
     {
         id: 5,
-        title: 'Бот Псина',
-        description: 'Чат-бот, который лает на голосовые и кружочки в группе Telegram',
+        title: 'Psina Bot',
+        description: 'A chat bot that barks at voice messages and round video clips in a Telegram group',
         image: '/img/projects/psina-ebot.png',
         tag: 'ROFL',
         tools: ['Node.js', 'Express', 'Telegram Bot API'],
@@ -51,8 +51,8 @@ const initialCards: Card[] = [
     },
     {
         id: 6,
-        title: 'Кумыс',
-        description: 'Рофло-лендинг о пользе кумыса',
+        title: 'Kumis',
+        description: 'A humorous landing page about the benefits of kumis',
         image: '/img/projects/koumiss.png',
         tag: 'ROFL',
         tools: ['HTML', 'CSS'],
@@ -81,7 +81,7 @@ const initialCards: Card[] = [
     {
         id: 9,
         title: 'Fancy Todo',
-        description: 'My everyday use website. Schedule todo app',
+        description: 'My everyday use website. Schedule todo app. Responsive',
         image: '/img/projects/fancy-todo.png',
         tag: '',
         tools: ['React', 'Material UI', 'Node.js', 'Express', 'MongoDB'],
