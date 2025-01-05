@@ -56,7 +56,7 @@ const initialCards: Card[] = [
         image: '/img/projects/koumiss.png',
         tag: 'ROFL',
         tools: ['HTML', 'CSS'],
-        demo: 'https://skyenot.online/koumiss',
+        demo: 'https://trainymonked.github.io/koumiss',
         hidden: true,
     },
     {
@@ -66,7 +66,7 @@ const initialCards: Card[] = [
         image: '/img/projects/skyenot-portfolio.png',
         tag: 'Portfolio',
         tools: ['HTML', 'CSS', 'JavaScript'],
-        demo: 'https://skyenot.online',
+        demo: 'https://skyenot.github.io',
     },
     {
         id: 8,
@@ -95,6 +95,7 @@ const initialCards: Card[] = [
         tag: 'Utilities',
         tools: ['Node.js', 'Express', 'OpenAI API', 'Telegram Bot API'],
         // demo: 'https://t.me/UsernameIsNotTaken_Bot',
+        hidden: true,
     },
     {
         id: 11,
@@ -154,7 +155,7 @@ const initialCards: Card[] = [
     {
         id: 17,
         title: 'Multiplayer Gaming Platform',
-        description: 'The platform where players can engage in multiplayer games across various genres',
+        description: 'The platform where players can engage in simple multiplayer games',
         image: '/img/projects/gaming-platform.png',
         tag: 'Games',
         tools: ['React', 'Material UI', 'Node.js', 'WebSocket', 'PostgreSQL'],
