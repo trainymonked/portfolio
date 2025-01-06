@@ -35,7 +35,7 @@ const Header = () => {
     }, [location.pathname])
 
     return (
-        <header className='container mx-auto flex justify-between mt-4'>
+        <header className='container mx-auto flex justify-between mt-4 px-4'>
             <h1 className='text-white text-3xl font-bold pt-2 text-nowrap mb-2'>{pages[0].content}</h1>
             {/* <h1 className='text-white text-3xl font-bold pt-2 text-nowrap mb-2'>{current}</h1> */}
             {/* <nav>

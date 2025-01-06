@@ -18,8 +18,8 @@ interface CardProps {
 const CardComponent: FC<CardProps> = ({ card }) => {
     return (
         <div
-            style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
-            className='p-2 rounded-md shadow-md overflow-hidden flex justify-between flex-col text-white'
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }}
+            className='p-3 rounded-lg shadow-md transition hover:shadow-lg flex flex-col justify-between text-gray-100'
         >
             <div>
                 <img
@@ -33,19 +33,19 @@ const CardComponent: FC<CardProps> = ({ card }) => {
                         }
                     }}
                     alt={card.title}
-                    className='w-full md:h-[12.5rem] mb-1 rounded-md object-cover border-2 border-black'
+                    className='w-full h-48 mb-3 rounded-md object-cover border border-gray-700'
                 />
                 <h2 className='text-xl font-semibold mb-2'>{card.title}</h2>
-                <p className='mb-2'>{card.description}</p>
+                <p className='text-sm text-gray-300 mb-3'>{card.description}</p>
             </div>
             <div>
                 {!!card.tools?.length && (
-                    <div className='flex flex-wrap gap-y-1 gap-x-0.5'>
-                        <span className='mr-1'>Tools Used:</span>
+                    <div className='flex flex-wrap gap-1 items-center'>
+                        <span>Tools Used:</span>
                         {card.tools.map(tool => (
                             <span
                                 key={tool}
-                                className='px-2 py-0.5 bg-zinc-700 text-sm rounded-full'
+                                className='px-1.5 py-0.5 bg-gray-700 text-xs rounded-full'
                             >
                                 {tool}
                             </span>
@@ -54,13 +54,13 @@ const CardComponent: FC<CardProps> = ({ card }) => {
                 )}
                 {card.demo && (
                     <div className='mt-2'>
-                        <span className='mr-1'>Demo:</span>
                         <a
-                            className='font-semibold hover:underline'
+                            className='font-semibold hover:underline text-blue-400'
                             href={card.demo}
                             target='_blank'
+                            rel='noopener noreferrer'
                         >
-                            Click here
+                            View Demo
                         </a>
                     </div>
                 )}

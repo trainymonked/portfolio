@@ -40,11 +40,13 @@ const App = () => {
     }
 
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto px-4'>
             <div className='flex justify-start mb-4 font-medium flex-wrap gap-y-2 mt-2'>
                 <button
-                    className={`mr-2 px-4 py-2 rounded-md ${
-                        selectedTag === null ? 'bg-orange-500 text-white' : 'bg-white text-gray-800'
+                    className={`mr-2 px-4 py-2 rounded-md transition ${
+                        selectedTag === null
+                            ? 'bg-blue-500 text-white hover:bg-blue-600'
+                            : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
                     }`}
                     onClick={() => filterCards(null)}
                 >
@@ -56,8 +58,10 @@ const App = () => {
                     .map(tag => (
                         <button
                             key={tag}
-                            className={`mr-2 px-4 py-2 rounded-md ${
-                                selectedTag === tag ? 'bg-orange-500 text-white' : 'bg-white text-gray-800'
+                            className={`mr-2 px-4 py-2 rounded-md transition ${
+                                selectedTag === tag
+                                    ? 'bg-blue-500 text-white hover:bg-blue-600'
+                                    : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
                             }`}
                             onClick={() => filterCards(tag)}
                         >
@@ -65,15 +69,20 @@ const App = () => {
                         </button>
                     ))}
             </div>
-            <div className='flex gap-1 text-white'>
+            <div className='flex items-center gap-2 text-gray-300 mb-4'>
                 <input
                     type='checkbox'
                     id='myCheckbox'
                     checked={showHidden}
                     onChange={() => setShowHidden(!showHidden)}
-                    className=''
+                    className='accent-blue-500'
                 />
-                <label htmlFor='myCheckbox'>Show hidden projects</label>
+                <label
+                    htmlFor='myCheckbox'
+                    className='text-sm'
+                >
+                    Show hidden projects
+                </label>
             </div>
             {!selectedTag ? (
                 <div>
@@ -82,9 +91,9 @@ const App = () => {
                         .map(([tag, cards]) => (
                             <div
                                 key={tag}
-                                className='mb-8'
+                                className='mb-4'
                             >
-                                <h2 className='text-2xl font-semibold mb-4 text-white'>{tag}</h2>
+                                <h2 className='text-2xl font-semibold mb-4 text-gray-100'>{tag}</h2>
                                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                                     {cards
                                         .sort((a, b) => a.title.localeCompare(b.title))
@@ -99,7 +108,7 @@ const App = () => {
                         ))}
                 </div>
             ) : (
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 mb-8'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4'>
                     {cards
                         .sort((a, b) => a.title.localeCompare(b.title))
                         .map(card => (
