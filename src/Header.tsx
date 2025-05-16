@@ -10,7 +10,7 @@ const pages = [
     {
         href: '/',
         title: 'Projects',
-        content: 'All My Personal Projects',
+        content: 'Personal Projects',
     },
     {
         href: '/about',
