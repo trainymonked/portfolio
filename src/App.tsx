@@ -4,17 +4,24 @@ import initialCards from './cards'
 import CardComponent, { Card } from './Card'
 
 const App = () => {
-    const [showHidden, setShowHidden] = useState(false)
-    const [cardsFiltered, setCardsFiltered] = useState<Card[]>(initialCards.filter(card => !card.hidden || showHidden))
+    // const [showHidden, setShowHidden] = useState(false)
+    // const [cardsFiltered, setCardsFiltered] = useState<Card[]>(initialCards.filter(card => !card.hidden || showHidden))
+    const [cardsFiltered, setCardsFiltered] = useState<Card[]>(initialCards.filter(card => !card.hidden))
 
     const [selectedTag, setSelectedTag] = useState<string | null>(null)
     const [cards, setCards] = useState<Card[]>(cardsFiltered)
 
     useEffect(() => {
-        const newCards = initialCards.filter(card => !card.hidden || showHidden)
+        const newCards = initialCards.filter(card => !card.hidden)
         setCardsFiltered(newCards)
         filterCards(selectedTag, newCards)
-    }, [showHidden, selectedTag])
+    }, [selectedTag])
+
+    // useEffect(() => {
+    //     const newCards = initialCards.filter(card => !card.hidden || showHidden)
+    //     setCardsFiltered(newCards)
+    //     filterCards(selectedTag, newCards)
+    // }, [showHidden, selectedTag])
 
     const filterCards = (tag: string | null, newCards = cardsFiltered) => {
         if (tag === null) {
