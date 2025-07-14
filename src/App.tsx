@@ -69,7 +69,8 @@ const App = () => {
                         </button>
                     ))}
             </div>
-            <div className='flex items-center gap-2 text-gray-300 mb-4'>
+
+            {/* <div className='flex items-center gap-2 text-gray-300 mb-4'>
                 <input
                     type='checkbox'
                     id='myCheckbox'
@@ -83,7 +84,7 @@ const App = () => {
                 >
                     Show hidden projects
                 </label>
-            </div>
+            </div> */}
             {!selectedTag ? (
                 <div>
                     {Object.entries(groupedCards)

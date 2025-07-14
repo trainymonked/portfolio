@@ -4,21 +4,37 @@ const initialCards: Card[] = [
   {
     id: 1,
     title: 'Reviews',
-    description: 'Reviews is a kind of IMDB clone that I created as a task. Responsive',
+    description:
+      'Reviews is a kind of IMDB clone that I created as a task. Responsive',
     image: '/img/projects/reviews.png',
     tag: 'Social',
-    tools: ['TypeScript', 'Next.js', 'React', 'Material UI', 'Supabase', 'PostgreSQL'],
-    demo: 'https://reviews-peach.vercel.app',
+    tools: [
+      'TypeScript',
+      'Next.js',
+      'React',
+      'Material UI',
+      'Supabase',
+      'PostgreSQL',
+    ],
+    demo: 'https://reviews.teacode.dev',
   },
   {
     id: 2,
-    title: 'Music Next',
+    title: 'MusicBox',
     description:
-      'Music Next is a Spotify-like web app that allows you to host your own music and listen to it online. Responsive',
+      'MusicBox is a Spotify-like web app that allows you to host your own music and listen to it online. Responsive',
     image: '/img/projects/music-next.png',
     tag: 'Services',
-    tools: ['TypeScript', 'Next.js', 'React', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Stripe API'],
-    demo: 'https://music-next-murex.vercel.app',
+    tools: [
+      'TypeScript',
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'Supabase',
+      'PostgreSQL',
+      'Stripe API',
+    ],
+    demo: 'https://musicbox.teacode.dev',
   },
   {
     id: 3,
@@ -28,12 +44,13 @@ const initialCards: Card[] = [
     image: '/img/projects/tg2vk-reposter.png',
     tag: 'Utilities',
     tools: ['Node.js', 'Express', 'MongoDB', 'Telegram Bot API', 'VK API'],
-    demo: 'https://t.me/tg2vk_repost',
+    // demo: 'https://t.me/tg2vk_repost',
   },
   {
     id: 4,
     title: 'Whats API',
-    description: 'Single-page online chatting application with multiple WhatsApp users using 3rd party API',
+    description:
+      'Single-page online chatting application with multiple WhatsApp users using 3rd party API',
     image: '/img/projects/whats-api.png',
     tag: 'Social',
     tools: ['React', 'Green API'],
@@ -46,7 +63,7 @@ const initialCards: Card[] = [
     image: '/img/projects/skyenot-portfolio.png',
     tag: 'Portfolio',
     tools: ['HTML', 'CSS', 'JavaScript'],
-    demo: 'https://skyenot.github.io',
+    // demo: 'https://skyenot.github.io',
   },
   {
     id: 6,
@@ -70,12 +87,12 @@ const initialCards: Card[] = [
   {
     id: 8,
     title: 'ChatBot',
-    description: 'Telegram bot which uses OpenAI API to talk to ChatGPT/DeepSeek',
+    description:
+      'Telegram bot which uses OpenAI API to talk to ChatGPT/DeepSeek',
     image: '/img/projects/chatbot.png',
     tag: 'Utilities',
     tools: ['Node.js', 'Express', 'OpenAI API', 'Telegram Bot API'],
     // demo: 'https://t.me/UsernameIsNotTaken_Bot',
-    hidden: true,
   },
   {
     id: 9,
@@ -89,7 +106,8 @@ const initialCards: Card[] = [
   {
     id: 10,
     title: 'HTML Resume (+ .pdf)',
-    description: 'Interactive resume website with the option to download a PDF file',
+    description:
+      'Interactive resume website with the option to download a PDF file',
     image: '/img/projects/resume.png',
     tag: 'Portfolio',
     tools: ['HTML', 'CSS'],
@@ -98,7 +116,8 @@ const initialCards: Card[] = [
   {
     id: 11,
     title: 'Figures',
-    description: 'Figures is a game where you need to match the shapes. Responsive',
+    description:
+      'Figures is a game where you need to match the shapes. Responsive',
     image: '/img/projects/figures.png',
     tag: 'Games',
     tools: ['PixiJS', 'JavaScript', 'HTML', 'CSS'],
@@ -125,7 +144,8 @@ const initialCards: Card[] = [
   {
     id: 14,
     title: 'Yoga Tours',
-    description: 'Yoga Tours is a large landing page that I created from mocks for portfolio. Responsive',
+    description:
+      'Yoga Tours is a large landing page that I created from mocks for portfolio. Responsive',
     image: '/img/projects/yoga-tours.jpg',
     tag: 'Landings',
     tools: ['HTML', 'CSS', 'JavaScript', 'Slick'],
@@ -134,7 +154,8 @@ const initialCards: Card[] = [
   {
     id: 15,
     title: 'Multiplayer Gaming Platform',
-    description: 'The platform where players can engage in simple multiplayer games',
+    description:
+      'The platform where players can engage in simple multiplayer games',
     image: '',
     tag: 'Games',
     tools: ['React', 'Material UI', 'Node.js', 'WebSocket', 'PostgreSQL'],
@@ -144,7 +165,8 @@ const initialCards: Card[] = [
   {
     id: 16,
     title: 'Email-like Messenger',
-    description: 'The platform where users can send messages in real-time to other users using nicknames',
+    description:
+      'The platform where users can send messages in real-time to other users using nicknames',
     image: '',
     tag: 'Social',
     tools: ['React', 'Material UI', 'Node.js', 'WebSocket', 'PostgreSQL'],
@@ -159,6 +181,7 @@ const initialCards: Card[] = [
     tag: 'Services',
     tools: ['React', 'Material UI', 'Spotify Web API'],
     demo: '',
+    hidden: true,
   },
   {
     id: 18,
@@ -168,6 +191,7 @@ const initialCards: Card[] = [
     tag: 'Portfolio',
     tools: ['HTML', 'CSS', 'JavaScript'],
     // demo: 'https://trainymonked.github.io',
+    hidden: true,
   },
   {
     id: 19,
@@ -176,7 +200,7 @@ const initialCards: Card[] = [
     image: '/img/projects/vk-mutual.png',
     tag: 'Social',
     tools: ['Vue.js', 'Tailwind CSS', 'Pinia', 'VK API', 'lodash'],
-    demo: 'https://trainymonked.github.io/vk-vue',
+    // demo: 'https://trainymonked.github.io/vk-vue',
   },
   {
     id: 20,
@@ -185,7 +209,15 @@ const initialCards: Card[] = [
       'An Expo-based mobile app that aggregates taxi services, letting users compare prices and book rides effortlessly',
     image: '/img/projects/cabzy.png',
     tag: 'Services',
-    tools: ['React Native', 'Expo', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Google Maps API', 'Stripe API'],
+    tools: [
+      'React Native',
+      'Expo',
+      'TypeScript',
+      'Tailwind CSS',
+      'PostgreSQL',
+      'Google Maps API',
+      'Stripe API',
+    ],
     demo: '',
   },
   {
@@ -196,6 +228,15 @@ const initialCards: Card[] = [
     tag: 'Games',
     tools: ['HTML', 'CSS', 'JavaScript'],
     demo: 'https://trainymonked.github.io/runaway-button',
+  },
+  {
+    id: 22,
+    title: 'Mafia Game',
+    description: 'Browser-based Mafia with live video and classic rules',
+    image: '/img/projects/mafia.png',
+    tag: 'Games',
+    tools: ['React', 'WebSocket', 'WebRTC', 'Node.js', 'Express', 'PostgreSQL'],
+    demo: 'https://mafia.teacode.dev',
   },
 ]
 
