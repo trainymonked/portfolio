@@ -82,7 +82,7 @@ const initialCards: Card[] = [
     image: '/img/projects/fancy-todo.png',
     tag: 'Services',
     tools: ['React', 'Material UI', 'Node.js', 'Express', 'MongoDB'],
-    demo: 'https://trainymonked.github.io/todo',
+    demo: 'https://todo.teacode.dev',
   },
   {
     id: 8,
@@ -101,7 +101,7 @@ const initialCards: Card[] = [
     image: '/img/projects/this-portfolio.png',
     tag: 'Portfolio',
     tools: ['TypeScript', 'React', 'Tailwind CSS'],
-    demo: 'https://trainymonked.github.io/portfolio',
+    demo: 'https://portfolio.teacode.dev',
   },
   {
     id: 10,
