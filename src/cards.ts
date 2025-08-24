@@ -4,18 +4,10 @@ const initialCards: Card[] = [
   {
     id: 1,
     title: 'Reviews',
-    description:
-      'Reviews is a kind of IMDB clone that I created as a task. Responsive',
+    description: 'Reviews is a kind of IMDB clone that I created as a task. Responsive',
     image: '/img/projects/reviews.png',
     tag: 'Social',
-    tools: [
-      'TypeScript',
-      'Next.js',
-      'React',
-      'Material UI',
-      'Supabase',
-      'PostgreSQL',
-    ],
+    tools: ['TypeScript', 'Next.js', 'React', 'Material UI', 'Supabase', 'PostgreSQL'],
     demo: 'https://reviews.teacode.dev',
   },
   {
@@ -25,15 +17,7 @@ const initialCards: Card[] = [
       'MusicBox is a Spotify-like web app that allows you to host your own music and listen to it online. Responsive',
     image: '/img/projects/music-next.png',
     tag: 'Services',
-    tools: [
-      'TypeScript',
-      'Next.js',
-      'React',
-      'Tailwind CSS',
-      'Supabase',
-      'PostgreSQL',
-      'Stripe API',
-    ],
+    tools: ['TypeScript', 'Next.js', 'React', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Stripe API'],
     demo: 'https://musicbox.teacode.dev',
   },
   {
@@ -49,8 +33,7 @@ const initialCards: Card[] = [
   {
     id: 4,
     title: 'Whats API',
-    description:
-      'Single-page online chatting application with multiple WhatsApp users using 3rd party API',
+    description: 'Single-page online chatting application with multiple WhatsApp users using 3rd party API',
     image: '/img/projects/whats-api.png',
     tag: 'Social',
     tools: ['React', 'Green API'],
@@ -87,8 +70,7 @@ const initialCards: Card[] = [
   {
     id: 8,
     title: 'ChatBot',
-    description:
-      'Telegram bot which uses OpenAI API to talk to ChatGPT/DeepSeek',
+    description: 'Telegram bot which uses OpenAI API to talk to ChatGPT/DeepSeek',
     image: '/img/projects/chatbot.png',
     tag: 'Utilities',
     tools: ['Node.js', 'Express', 'OpenAI API', 'Telegram Bot API'],
@@ -106,8 +88,7 @@ const initialCards: Card[] = [
   {
     id: 10,
     title: 'HTML Resume (+ .pdf)',
-    description:
-      'Interactive resume website with the option to download a PDF file',
+    description: 'Interactive resume website with the option to download a PDF file',
     image: '/img/projects/resume.png',
     tag: 'Portfolio',
     tools: ['HTML', 'CSS'],
@@ -116,8 +97,7 @@ const initialCards: Card[] = [
   {
     id: 11,
     title: 'Figures',
-    description:
-      'Figures is a game where you need to match the shapes. Responsive',
+    description: 'Figures is a game where you need to match the shapes. Responsive',
     image: '/img/projects/figures.png',
     tag: 'Games',
     tools: ['PixiJS', 'JavaScript', 'HTML', 'CSS'],
@@ -144,8 +124,7 @@ const initialCards: Card[] = [
   {
     id: 14,
     title: 'Yoga Tours',
-    description:
-      'Yoga Tours is a large landing page that I created from mocks for portfolio. Responsive',
+    description: 'Yoga Tours is a large landing page that I created from mocks for portfolio. Responsive',
     image: '/img/projects/yoga-tours.jpg',
     tag: 'Landings',
     tools: ['HTML', 'CSS', 'JavaScript', 'Slick'],
@@ -154,8 +133,7 @@ const initialCards: Card[] = [
   {
     id: 15,
     title: 'Multiplayer Gaming Platform',
-    description:
-      'The platform where players can engage in simple multiplayer games',
+    description: 'The platform where players can engage in simple multiplayer games',
     image: '',
     tag: 'Games',
     tools: ['React', 'Material UI', 'Node.js', 'WebSocket', 'PostgreSQL'],
@@ -165,8 +143,7 @@ const initialCards: Card[] = [
   {
     id: 16,
     title: 'Email-like Messenger',
-    description:
-      'The platform where users can send messages in real-time to other users using nicknames',
+    description: 'The platform where users can send messages in real-time to other users using nicknames',
     image: '',
     tag: 'Social',
     tools: ['React', 'Material UI', 'Node.js', 'WebSocket', 'PostgreSQL'],
@@ -209,15 +186,7 @@ const initialCards: Card[] = [
       'An Expo-based mobile app that aggregates taxi services, letting users compare prices and book rides effortlessly',
     image: '/img/projects/cabzy.png',
     tag: 'Services',
-    tools: [
-      'React Native',
-      'Expo',
-      'TypeScript',
-      'Tailwind CSS',
-      'PostgreSQL',
-      'Google Maps API',
-      'Stripe API',
-    ],
+    tools: ['React Native', 'Expo', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Google Maps API', 'Stripe API'],
     demo: '',
   },
   {
