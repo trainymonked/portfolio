@@ -2,7 +2,7 @@
 
 A personal, single-page portfolio built with React, TypeScript, Vite and Tailwind CSS.
 
-🔗 [Live Demo](https://trainymonked.github.io/portfolio)
+🔗 [Live Demo](https://portfolio.teacode.dev)
 
 ## Features
 

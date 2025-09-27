@@ -4,7 +4,7 @@ const initialCards: Card[] = [
   {
     id: 1,
     title: 'Reviews',
-    description: 'Reviews is a kind of IMDB clone that I created as a task. Responsive',
+    description: 'Reviews is an IMDB-like app I created as a task. Responsive',
     image: '/img/projects/reviews.png',
     tag: 'Social',
     tools: ['TypeScript', 'Next.js', 'React', 'Material UI', 'Supabase', 'PostgreSQL'],
@@ -13,8 +13,7 @@ const initialCards: Card[] = [
   {
     id: 2,
     title: 'MusicBox',
-    description:
-      'MusicBox is a Spotify-like web app that allows you to host your own music and listen to it online. Responsive',
+    description: 'Spotify-like web app to stream your own music. Responsive',
     image: '/img/projects/music-next.png',
     tag: 'Services',
     tools: ['TypeScript', 'Next.js', 'React', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Stripe API'],
@@ -61,7 +60,7 @@ const initialCards: Card[] = [
   {
     id: 7,
     title: 'Fancy Todo',
-    description: 'My everyday use website. Schedule todo app. Responsive',
+    description: 'Timeline todo app. Responsive',
     image: '/img/projects/fancy-todo.png',
     tag: 'Services',
     tools: ['React', 'Material UI', 'Node.js', 'Express', 'MongoDB'],
@@ -101,7 +100,7 @@ const initialCards: Card[] = [
     image: '/img/projects/figures.png',
     tag: 'Games',
     tools: ['PixiJS', 'JavaScript', 'HTML', 'CSS'],
-    demo: 'https://trainymonked.github.io/pixi-figures',
+    demo: 'https://games.teacode.dev/figures',
   },
   {
     id: 12,
@@ -110,7 +109,7 @@ const initialCards: Card[] = [
     image: '/img/projects/tetris.jpg',
     tag: 'Games',
     tools: ['JavaScript', 'HTML', 'CSS'],
-    demo: 'https://trainymonked.github.io/tetris',
+    demo: 'https://games.teacode.dev/tetris',
   },
   {
     id: 13,
@@ -196,7 +195,7 @@ const initialCards: Card[] = [
     image: '/img/projects/runaway-button.png',
     tag: 'Games',
     tools: ['HTML', 'CSS', 'JavaScript'],
-    demo: 'https://trainymonked.github.io/runaway-button',
+    demo: 'https://games.teacode.dev/runaway-button',
   },
   {
     id: 22,
