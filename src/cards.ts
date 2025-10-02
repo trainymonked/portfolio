@@ -36,7 +36,7 @@ const initialCards: Card[] = [
     image: '/img/projects/whats-api.png',
     tag: 'Social',
     tools: ['React', 'Green API'],
-    demo: 'https://trainymonked.github.io/whats-api',
+    demo: 'https://sites.teacode.dev/whats-api',
   },
   {
     id: 5,
@@ -118,7 +118,7 @@ const initialCards: Card[] = [
     image: '/img/projects/kinopulse.jpg',
     tag: 'Landings',
     tools: ['HTML', 'CSS', 'Animate.css', 'jQuery', 'Fancybox'],
-    demo: 'https://trainymonked.github.io/batman',
+    demo: 'https://sites.teacode.dev/batman',
   },
   {
     id: 14,
@@ -127,7 +127,7 @@ const initialCards: Card[] = [
     image: '/img/projects/yoga-tours.jpg',
     tag: 'Landings',
     tools: ['HTML', 'CSS', 'JavaScript', 'Slick'],
-    demo: 'https://trainymonked.github.io/yoga-india',
+    demo: 'https://sites.teacode.dev/yoga-india',
   },
   {
     id: 15,
@@ -176,7 +176,7 @@ const initialCards: Card[] = [
     image: '/img/projects/vk-mutual.png',
     tag: 'Social',
     tools: ['Vue.js', 'Tailwind CSS', 'Pinia', 'VK API', 'lodash'],
-    // demo: 'https://trainymonked.github.io/vk-vue',
+    // demo: 'https://sites.teacode.dev/vk-vue',
   },
   {
     id: 20,
